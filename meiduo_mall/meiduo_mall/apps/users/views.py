@@ -1,3 +1,5 @@
+import json
+
 from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -8,10 +10,37 @@ from meiduo_mall.utils.response_code import RETCODE
 
 #  此处路径容易错
 from meiduo_mall.utils.views import LoginRequiredMixin
+from oauth.views import logger
 from .models import User
 
 from django.db import DatabaseError
 from django_redis import get_redis_connection
+
+
+class EmailView(View):
+
+    def put(self, request):
+        # 1.接收参数
+        json_str = request.body.decode()
+        json_dict = json.loads(json_str)
+        email = json_dict.get('email')
+
+        # 2.校验参数
+        if not email:
+            return http.HttpResponseForbidden('缺少email参数')
+
+        if not re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
+            return http.HttpResponseForbidden('参数email有误')
+
+        # 3.更改数据库
+        try:
+            request.user.email = email
+            request.user.save()
+        except Exception as e:
+            logger.error(e)
+            return http.JsonResponse({'code': RETCODE.DBERR, 'errmsg': '添加邮箱失败'})
+        # 4.返回
+        return http.JsonResponse({'code': RETCODE.OK, 'errmsg': '添加邮箱成功'})
 
 
 class UserInfoView(LoginRequiredMixin, View):
@@ -22,7 +51,14 @@ class UserInfoView(LoginRequiredMixin, View):
         :param request:
         :return:
         '''
-        return render(request, 'user_center_info.html')
+        context = {
+            'username': request.user.username,
+            'mobile': request.user.mobile,
+            'email': request.user.email,
+            'email_active': request.user.emai_active,
+
+        }
+        return render(request, 'user_center_info.html', context=context)
 
 
 class LoginView(View):

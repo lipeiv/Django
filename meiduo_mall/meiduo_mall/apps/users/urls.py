@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^logout/$', views.LogoutView.as_view(), name='logout'),
     # 子路由
     url(r'^info/$', views.UserInfoView.as_view(), name='info'),
+    url(r'^emails/$', views.EmailView.as_view()),
     ]
