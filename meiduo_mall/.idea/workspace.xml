@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dbbda9f-4908-4835-b83e-b745fbd04448" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/apps/carts/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/apps/goods/search_indexes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/apps/goods/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/apps/goods/utils.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meiduo_mall/static/list.html" afterPath="$PROJECT_DIR$/meiduo_mall/templates/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/meiduo_mall.iml" afterPath="$PROJECT_DIR$/.idea/meiduo_mall.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="0dbbda9f-4908-4835-b83e-b745fbd04448" name="Default" comment="meiduo">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/apps/contents/views.py" afterPath="$PROJECT_DIR$/meiduo_mall/apps/contents/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/apps/goods/views.py" afterPath="$PROJECT_DIR$/meiduo_mall/apps/goods/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/settings/dev.py" afterPath="$PROJECT_DIR$/meiduo_mall/settings/dev.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/static/detail.html" afterPath="$PROJECT_DIR$/meiduo_mall/static/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/templates/index.html" afterPath="$PROJECT_DIR$/meiduo_mall/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/urls.py" afterPath="$PROJECT_DIR$/meiduo_mall/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/templates/list.html" afterPath="$PROJECT_DIR$/meiduo_mall/templates/list.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,11 +61,9 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meiduo_mall/apps/carts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="252">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -622,6 +608,14 @@
       <workItem from="1557237130121" duration="101000" />
       <workItem from="1557237245186" duration="473000" />
     </task>
+    <task id="LOCAL-00001" summary="meiduo">
+      <created>1557287226569</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557287226569</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -638,7 +632,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="114" y="42" width="1798" height="1793" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2363213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -665,6 +659,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="meiduo" />
+    <option name="LAST_COMMIT_MESSAGE" value="meiduo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -993,11 +991,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meiduo_mall/apps/carts/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="252">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
