@@ -16,12 +16,10 @@ class IndexView(View):
         dict = {}
 
         for cat in content_categories:
-
             dict[cat.key] = cat.content_set.filter(status=True).order_by('sequence')
 
         context = {
-            'categories':categiries,
-            'contents':dict
+            'categories': categiries,
+            'contents': dict
         }
-
         return render(request, 'index.html', context=context)

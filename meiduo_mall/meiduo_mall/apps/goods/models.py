@@ -188,6 +188,7 @@ class SKUSpecification(BaseModel):
     """
     # 对应的SKU值
     sku = models.ForeignKey(SKU, on_delete=models.CASCADE, verbose_name='sku')
+
     # 对应哪一个规格
     spec = models.ForeignKey(GoodsSpecification, on_delete=models.PROTECT, verbose_name='规格名称')
     # 规格的具体内容
@@ -200,3 +201,17 @@ class SKUSpecification(BaseModel):
 
     def __str__(self):
         return '%s: %s - %s' % (self.sku, self.spec.name, self.option.value)
+
+
+class GoodsVisitCount(BaseModel):
+    """统计分类商品访问量模型类"""
+    category = models.ForeignKey(GoodsCategory,
+                                 on_delete=models.CASCADE,
+                                 verbose_name='商品分类')
+    count = models.IntegerField(verbose_name='访问量', default=0)
+    date = models.DateField(auto_now_add=True, verbose_name='统计日期')
+
+    class Meta:
+        db_table = 'tb_goods_visit'
+        verbose_name = '统计分类商品访问量'
+        verbose_name_plural = verbose_name

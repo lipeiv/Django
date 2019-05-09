@@ -1,16 +1,46 @@
-from django.shortcuts import render
-
-# Create your views here.
+import datetime
 from django import http
 from django.core.paginator import Paginator, EmptyPage
 from django.shortcuts import render
-
-# Create your views here.
+from django.utils import timezone
 from django.views import View
-
-from goods.models import GoodsCategory, SKU
-from goods.utils import get_categories, get_breadcrumb
+from goods.models import GoodsCategory, SKU, GoodsVisitCount
+from goods.utils import get_categories, get_breadcrumb, get_goods_and_spec
 from meiduo_mall.utils.response_code import RETCODE
+
+
+class DetailVisitView(View):
+
+    def post(self, request, category_id):
+
+        try:
+            category = GoodsCategory.objects.get(id=category_id)
+        except GoodsCategory.DoesNotExist:
+            return http.HttpResponseForbidden('缺少必传参数')
+        t = timezone.localtime()
+        # 根据时间对象拼接日期的字符串形式:
+        today_str = '%d-%02d-%02d' % (t.year, t.month, t.day)
+        # 将字符串转为日期格式:
+        today_date = datetime.datetime.strptime(today_str, '%Y-%m-%d')
+        try:
+            # 将今天的日期传入进去, 获取该商品今天的访问量:
+            # 查询今天该类别的商品的访问量
+            counts_data = category.goodsvisitcount_set.get(date=today_date)
+        except GoodsVisitCount.DoesNotExist:
+            # 如果该类别的商品在今天没有过访问记录，就新建一个访问记录
+            counts_data = GoodsVisitCount()
+
+        try:
+            # 更新模型类对象里面的属性: category 和 count
+            counts_data.category = category
+            counts_data.count += 1
+            counts_data.save()
+        except Exception as e:
+            # logger.error(e)
+            return http.HttpResponseServerError('服务器异常')
+
+        # 返回:
+        return http.JsonResponse({'code': RETCODE.OK, 'errmsg': 'OK'})
 
 
 class HotGoodsView(View):
@@ -103,3 +133,24 @@ class ListView(View):
 
         # 5. 返回
         return render(request, 'list.html', context=context)
+
+
+class DetailView(View):
+
+    def get(self, request, sku_id):
+        # try:
+        #     sku = SKU.objects.get(id=sku_id)
+        # except SKU.DoesNotExist:
+        #     return  render(request, '404.html')
+
+        categories = get_categories()
+
+        data = get_goods_and_spec(sku_id, request)
+
+        context = {
+            'categories': categories,
+            'goods': data.get('goods'),
+            'specs': data.get('goods_specs'),
+            'sku': data.get('sku'),
+        }
+        return render(request, 'detail.html', context)

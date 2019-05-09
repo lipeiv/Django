@@ -6,6 +6,8 @@ from django.urls import reverse
 from django.views import View
 from django import http
 import re
+
+from goods.models import SKU
 from meiduo_mall.utils.response_code import RETCODE
 
 #  此处路径容易错
