@@ -158,6 +158,7 @@ class UsernameCountView(View):
                                   'errmsg': 'OK',
                                   'count': count})
 
+
 class RegisterView(View):
 
     def get(self, request):
