@@ -209,7 +209,7 @@ class RegisterView(View):
         # 3. 保存
         try:
             user = User.objects.create_user(username=username, password=password, mobile=mobile)
-        except  DatabaseError:
+        except DatabaseError:
             return render(request, 'register.html', {'reigster_errmsg': '保存用户名失败'})
 
         # 状态保存
