@@ -18,5 +18,24 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # users
     url(r'^', include('users.urls', namespace='users')),
+    # contents
+    url(r'^', include('contents.urls', namespace='contents')),
+    # verifications
+    url(r'^', include('verifications.urls')),
+    # oauth
+    url(r'^', include('oauth.urls')),
+    # areas:
+    url(r'^', include('areas.urls')),
+    # goods:
+    url(r'^', include('goods.urls', namespace='goods')),
+    # Haystack 注册
+    url(r'^search/', include('haystack.urls')),
+    # carts
+    url(r'^', include('carts.urls', namespace='carts')),
+    # orders
+    url(r'^', include('orders.urls', namespace='orders')),
+    # payment
+    url(r'^', include('payment.urls')),
 ]

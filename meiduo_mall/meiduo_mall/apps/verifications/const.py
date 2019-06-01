@@ -1,0 +1,1 @@
+image_code_expire = 300
