@@ -1,4 +1,4 @@
-from alipay import AliPay
+# from alipay import AliPay
 from django import http
 from django.shortcuts import render
 from django.conf import settings
@@ -28,7 +28,8 @@ class PaymentStatusView(View):
         signature = data.pop('sign')
 
         # 3. 创建 工具类(python-alipay-sdk) 的对象
-        alipay = AliPay(
+        from alipay import Alipay
+        alipay = Alipay(
             appid=settings.ALIPAY_APPID,
             app_notify_url=None,  # 默认回调url
             app_private_key_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), "keys/app_private_key.pem"),

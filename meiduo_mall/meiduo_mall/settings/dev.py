@@ -84,19 +84,6 @@ TEMPLATES = [
             'environment':'meiduo_mall.utils.jinja2_env.jinja2_environment'
         },
     },
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
 ]
 
 WSGI_APPLICATION = 'meiduo_mall.wsgi.application'
@@ -114,14 +101,14 @@ DATABASES = {
         'PASSWORD': 'mysql',
         'NAME': 'project',
     },
-    'slave': {  # 读（从机）
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',
-        'PORT': 8306,
-        'USER': 'root',
-        'PASSWORD': 'mysql',
-        'NAME': 'project'
-    }
+    # 'slave': {  # 读（从机）
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': 8306,
+    #     'USER': 'root',
+    #     'PASSWORD': '123456',
+    #     'NAME': 'project'
+    # }
 }
 
 

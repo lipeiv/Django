@@ -84,10 +84,8 @@ class UserBrowseHistory(LoginRequiredJsonMixin, View):
         pl.execute()
 
         # 7.返回
-        return http.JsonResponse({'code':RETCODE.OK,
-                                  'errmsg':'ok'})
-
-
+        return http.JsonResponse({'code': RETCODE.OK,
+                                  'errmsg': 'ok'})
 
 
 class ChangePasswordView(LoginRequiredMixin, View):
@@ -164,7 +162,6 @@ class UpdateTitleAddressView(LoginRequiredJsonMixin, View):
         return http.JsonResponse({'code':RETCODE.OK, 'errmsg':'ok'})
 
 
-
 class DefaultAddressView(LoginRequiredJsonMixin, View):
 
     def put(self, request, address_id):
@@ -184,7 +181,6 @@ class DefaultAddressView(LoginRequiredJsonMixin, View):
             return http.JsonResponse({'code':RETCODE.DBERR, 'errmsg':'设置默认地址失败'})
 
         return http.JsonResponse({'code':RETCODE.OK, 'errmsg':'ok'})
-
 
 
 class UpdateDestroyAddressView(LoginRequiredJsonMixin, View):
@@ -353,8 +349,6 @@ class CreateAddressView(LoginRequiredJsonMixin, View):
                                   'address':address_dict})
 
 
-
-
 class AddressView(LoginRequiredMixin, View):
 
     def get(self, request):
@@ -401,12 +395,6 @@ class AddressView(LoginRequiredMixin, View):
         return render(request, 'user_center_site.html', context=context)
 
 
-
-
-
-
-
-
 class VerifyEmailView(View):
 
     def get(self, request):
@@ -428,10 +416,6 @@ class VerifyEmailView(View):
             return http.HttpResponseServerError('修改邮箱验证失败')
 
         return redirect(reverse('users:info'))
-
-
-
-
 
 
 class EmailView(LoginRequiredJsonMixin, View):
@@ -478,9 +462,6 @@ class EmailView(LoginRequiredJsonMixin, View):
         return http.JsonResponse({'code':RETCODE.OK, 'errmsg':'邮箱保存成功'})
 
 
-
-
-
 class UserInfoView(LoginRequiredMixin, View):
 
     def get(self, request):
@@ -500,8 +481,6 @@ class UserInfoView(LoginRequiredMixin, View):
         return render(request, 'user_center_info.html', context=context)
 
 
-
-
 class LogoutView(View):
     def get(self, request):
         '''
@@ -519,7 +498,6 @@ class LogoutView(View):
 
         # 3. 返回
         return response
-
 
 
 class LoginView(View):
@@ -593,7 +571,6 @@ class LoginView(View):
         return response
 
 
-
 class MobileCountView(View):
 
     def get(self, request, mobile):
@@ -610,8 +587,6 @@ class MobileCountView(View):
         return http.JsonResponse({'code':RETCODE.OK,
                                   'errmsg':'OK',
                                   'count': count})
-
-
 
 
 class UsernameCountView(View):
@@ -631,9 +606,6 @@ class UsernameCountView(View):
         return http.JsonResponse({'code':RETCODE.OK,
                                   'errmsg':'OK',
                                   'count': count})
-
-
-
 
 
 class RegisterView(View):

@@ -2382,3 +2382,248 @@ INFO 2019-05-12 04:11:14,353 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
 INFO 2019-05-12 04:11:27,686 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
 WARNING 2019-05-12 07:22:12,722 base 152 Not Found: /favicon.ico
 WARNING 2019-05-12 07:23:02,696 base 152 Not Found: /comment/3/
+ERROR 2019-06-01 09:05:51,025 exception 135 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/pymysql/connections.py", line 583, in connect
+    **kwargs)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/backends/base/base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 274, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/lipeiv/Django/meiduo_mall/meiduo_mall/apps/contents/views.py", line 16, in get
+    categiries = get_categories()
+  File "/home/lipeiv/Django/meiduo_mall/meiduo_mall/apps/goods/utils.py", line 106, in get_categories
+    for channel in channels:
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 250, in __iter__
+    self._fetch_all()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 887, in execute_sql
+    cursor = self.connection.cursor()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/backends/base/base.py", line 254, in cursor
+    return self._cursor()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/backends/base/base.py", line 229, in _cursor
+    self.ensure_connection()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/backends/base/base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 274, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+ERROR 2019-06-01 09:05:51,085 basehttp 124 "GET / HTTP/1.1" 500 224957
+ERROR 2019-06-01 09:13:46,525 exception 135 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 176, in ensure_defaults
+    conn = self.databases[alias]
+KeyError: 'slave'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/lipeiv/Django/meiduo_mall/meiduo_mall/apps/contents/views.py", line 16, in get
+    categiries = get_categories()
+  File "/home/lipeiv/Django/meiduo_mall/meiduo_mall/apps/goods/utils.py", line 106, in get_categories
+    for channel in channels:
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 250, in __iter__
+    self._fetch_all()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 50, in __iter__
+    compiler = queryset.query.get_compiler(using=db)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 255, in get_compiler
+    connection = connections[using]
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 208, in __getitem__
+    self.ensure_defaults(alias)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 178, in ensure_defaults
+    raise ConnectionDoesNotExist("The connection %s doesn't exist" % alias)
+django.db.utils.ConnectionDoesNotExist: The connection slave doesn't exist
+ERROR 2019-06-01 09:13:46,562 basehttp 124 "GET / HTTP/1.1" 500 115329
+ERROR 2019-06-01 13:34:08,311 exception 135 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 176, in ensure_defaults
+    conn = self.databases[alias]
+KeyError: 'slave'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/lipeiv/Django/meiduo_mall/meiduo_mall/apps/contents/views.py", line 16, in get
+    categiries = get_categories()
+  File "/home/lipeiv/Django/meiduo_mall/meiduo_mall/apps/goods/utils.py", line 106, in get_categories
+    for channel in channels:
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 250, in __iter__
+    self._fetch_all()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 50, in __iter__
+    compiler = queryset.query.get_compiler(using=db)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 255, in get_compiler
+    connection = connections[using]
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 208, in __getitem__
+    self.ensure_defaults(alias)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 178, in ensure_defaults
+    raise ConnectionDoesNotExist("The connection %s doesn't exist" % alias)
+django.db.utils.ConnectionDoesNotExist: The connection slave doesn't exist
+ERROR 2019-06-01 13:34:08,344 basehttp 124 "GET / HTTP/1.1" 500 115329
+ERROR 2019-06-01 13:34:08,970 exception 135 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 176, in ensure_defaults
+    conn = self.databases[alias]
+KeyError: 'slave'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/lipeiv/Django/meiduo_mall/meiduo_mall/apps/contents/views.py", line 16, in get
+    categiries = get_categories()
+  File "/home/lipeiv/Django/meiduo_mall/meiduo_mall/apps/goods/utils.py", line 106, in get_categories
+    for channel in channels:
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 250, in __iter__
+    self._fetch_all()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 50, in __iter__
+    compiler = queryset.query.get_compiler(using=db)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 255, in get_compiler
+    connection = connections[using]
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 208, in __getitem__
+    self.ensure_defaults(alias)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 178, in ensure_defaults
+    raise ConnectionDoesNotExist("The connection %s doesn't exist" % alias)
+django.db.utils.ConnectionDoesNotExist: The connection slave doesn't exist
+ERROR 2019-06-01 13:34:09,003 basehttp 124 "GET / HTTP/1.1" 500 115329
+ERROR 2019-06-01 13:35:17,534 exception 135 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 176, in ensure_defaults
+    conn = self.databases[alias]
+KeyError: 'slave'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/lipeiv/Django/meiduo_mall/meiduo_mall/apps/contents/views.py", line 16, in get
+    categiries = get_categories()
+  File "/home/lipeiv/Django/meiduo_mall/meiduo_mall/apps/goods/utils.py", line 106, in get_categories
+    for channel in channels:
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 250, in __iter__
+    self._fetch_all()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 50, in __iter__
+    compiler = queryset.query.get_compiler(using=db)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 255, in get_compiler
+    connection = connections[using]
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 208, in __getitem__
+    self.ensure_defaults(alias)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/utils.py", line 178, in ensure_defaults
+    raise ConnectionDoesNotExist("The connection %s doesn't exist" % alias)
+django.db.utils.ConnectionDoesNotExist: The connection slave doesn't exist
+ERROR 2019-06-01 13:35:17,564 basehttp 124 "GET / HTTP/1.1" 500 115464
+WARNING 2019-06-01 13:37:15,638 base 152 Not Found: /index
+WARNING 2019-06-01 13:37:15,638 basehttp 124 "GET /index HTTP/1.1" 404 8155
+INFO 2019-06-01 13:37:29,857 basehttp 124 "GET /admin/ HTTP/1.1" 302 0
+ERROR 2019-06-01 13:37:29,862 exception 135 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/template/response.py", line 82, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/template/response.py", line 64, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/lipeiv/.virtualenvs/meiduo/lib/python3.7/site-packages/django/template/loader.py", line 53, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: admin/login.html
+ERROR 2019-06-01 13:37:29,883 basehttp 124 "GET /admin/login/?next=/admin/ HTTP/1.1" 500 88090
