@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="558d4135-801b-41c1-aff7-e8f519c43d11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/jinja2_env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booktest/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/booktest/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booktest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/booktest/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="558d4135-801b-41c1-aff7-e8f519c43d11" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +132,7 @@
       <workItem from="1562816950953" duration="18000" />
       <workItem from="1562816994437" duration="14000" />
       <workItem from="1562817009834" duration="4219000" />
-      <workItem from="1562921641710" duration="11603000" />
+      <workItem from="1562921641710" duration="11624000" />
     </task>
     <task id="LOCAL-00001" summary="demo">
       <created>1562928217975</created>
@@ -155,16 +148,23 @@
       <option name="project" value="LOCAL" />
       <updated>1562928256788</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="demo">
+      <created>1562937067662</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562937067662</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15854000" />
+    <option name="totallyTimeSpent" value="15875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="7" width="899" height="916" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25680473" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25680473" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -178,7 +178,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32883435" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32883435" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
