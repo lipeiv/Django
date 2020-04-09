@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="558d4135-801b-41c1-aff7-e8f519c43d11" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="558d4135-801b-41c1-aff7-e8f519c43d11" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +41,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
@@ -104,7 +100,7 @@
       <workItem from="1562817009834" duration="4219000" />
       <workItem from="1562921641710" duration="11624000" />
       <workItem from="1562937199704" duration="43000" />
-      <workItem from="1586425812246" duration="85000" />
+      <workItem from="1586425812246" duration="469000" />
     </task>
     <task id="LOCAL-00001" summary="demo">
       <created>1562928217975</created>
@@ -142,22 +138,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586425861917" />
-    <state width="1340" height="264" key="GridCell.Tab.0.bottom" timestamp="1586426051062">
+    <state width="1340" height="264" key="GridCell.Tab.0.bottom" timestamp="1586426173466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586426051062" />
-    <state width="1340" height="264" key="GridCell.Tab.0.center" timestamp="1586426051062">
+    <state width="1340" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586426173466" />
+    <state width="1340" height="264" key="GridCell.Tab.0.center" timestamp="1586426173466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586426051062" />
-    <state width="1340" height="264" key="GridCell.Tab.0.left" timestamp="1586426051062">
+    <state width="1340" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586426173466" />
+    <state width="1340" height="264" key="GridCell.Tab.0.left" timestamp="1586426173466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586426051062" />
-    <state width="1340" height="264" key="GridCell.Tab.0.right" timestamp="1586426051062">
+    <state width="1340" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586426173466" />
+    <state width="1340" height="264" key="GridCell.Tab.0.right" timestamp="1586426173466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586426051062" />
+    <state width="1340" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586426173466" />
     <state x="468" y="163" key="SettingsEditor" timestamp="1586425897246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -168,6 +164,6 @@
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586425813826" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/demo$manage.coverage" NAME="manage Coverage Results" MODIFIED="1586426051050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo$manage.coverage" NAME="manage Coverage Results" MODIFIED="1586426124631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
